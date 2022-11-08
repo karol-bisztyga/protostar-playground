@@ -6,8 +6,27 @@ libs_path = "lib"
 
 ["protostar.contracts"]
 main = [
-    "src/main.cairo",
+    "src/counter.cairo",
 ]
 
 ["protostar.shared_command_configs"]
 cairo_path = ["./lib/cairo_contracts/src", "./lib/cairo_contracts/src2", "./lib/cairo_contracts/src3"]
+
+[profile.devnet.protostar.deploy]
+gateway_url="http://127.0.0.1:5050/"
+chain-id = 1536727068981429685321
+
+
+["protostar.declare_local"]
+gateway-url="http://127.0.0.1:5050/"
+account_address=0x7d871ea8e4a8dee19292f361bb10dd725fb1a06ab83002388c1861f1c0e406c
+private-key-path="priv.key"
+max-fee="auto"
+chain-id=1536727068981429685321
+
+["protostar.declare"]
+network="testnet"
+account_address=0x0668c707Af664985EDfB3Ea616a0189660C2C54ADCa787B870B55DC314b91d94
+private-key-path="priv.key"
+max-fee="auto"
+
