@@ -24,9 +24,35 @@ private-key-path="priv.key"
 max-fee="auto"
 chain-id=1536727068981429685321
 
-["protostar.declare"]
+["protostar.deploy"]
+gateway-url="http://127.0.0.1:5050/"
+account_address=0x7d871ea8e4a8dee19292f361bb10dd725fb1a06ab83002388c1861f1c0e406c
+private-key-path="priv.key"
+max-fee="auto"
+chain-id=1536727068981429685321
+
+["protostar.deploy_testnet"]
 network="testnet"
 account_address=0x0668c707Af664985EDfB3Ea616a0189660C2C54ADCa787B870B55DC314b91d94
 private-key-path="priv.key"
 max-fee="auto"
 
+["protostar.call"]
+contract-address=0x05853d723cc575098f8b36e7e1511a4c5f2586dc798ee9bf7f665d92d963b6c2
+gateway-url="http://127.0.0.1:5050/"
+chain-id=1536727068981429685321
+
+["protostar.invoke"]
+contract-address=0x05853d723cc575098f8b36e7e1511a4c5f2586dc798ee9bf7f665d92d963b6c2
+gateway-url="http://127.0.0.1:5050/"
+chain-id=1536727068981429685321
+account_address=0x0668c707Af664985EDfB3Ea616a0189660C2C54ADCa787B870B55DC314b91d94
+private-key-path="priv.key"
+max-fee="auto"
+
+["protostar.call_testnet"]
+contract-address=0x3342310a9e3777495c967544faa4626ae578f7278d4b36a8a6838d38dbab044
+network="testnet"
+
+["protostar.test"]
+disable-hint-validation=""

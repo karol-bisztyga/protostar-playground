@@ -8,10 +8,8 @@ func value() -> (res: felt) {
 }
 
 @constructor
-func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
-    starting_value: felt
-) {
-    value.write(starting_value);
+func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() {
+    value.write(100);
     return ();
 }
 
@@ -35,6 +33,15 @@ func sub_value{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
     let (curr_value) = value.read();
     assert_le(0, curr_value - n);
     value.write(curr_value - n);
+    let (new_value) = value.read();
+    return (new_value,);
+}
+
+@external
+func add_3_values{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(a: felt, b: felt, c: felt) -> (res: felt) {
+    let (curr_value) = value.read();
+    assert_le(curr_value + a + b + c, 1000);
+    value.write(curr_value + a + b + c);
     let (new_value) = value.read();
     return (new_value,);
 }

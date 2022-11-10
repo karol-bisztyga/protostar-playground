@@ -10,12 +10,14 @@ namespace CounterContract {
   }
   func sub_value(n: felt) -> (res: felt) {
   }
+  func add_3_values(a: felt, b: felt, c: felt) -> (res: felt) {
+  }
 }
 
 @external
 func setup_basic() {
     %{
-      context.contract_address = deploy_contract("./src/counter.cairo", [100]).contract_address
+      context.contract_address = deploy_contract("./src/counter.cairo").contract_address
     %}
     return ();
 }
@@ -35,6 +37,9 @@ func test_basic{syscall_ptr: felt*, range_check_ptr}() {
 
     let (res,) = CounterContract.sub_value(contract_address=contract_address, n=60);
     assert res = 90;
+
+    let (res,) = CounterContract.add_3_values(contract_address=contract_address, a=10, b=20, c=30);
+    assert res = 150;
 
     return ();
 }
