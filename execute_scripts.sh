@@ -5,7 +5,7 @@ set -e
 # ../../crypto/protostar/dist/protostar/protostar test tests/test_counter.cairo --disable-hint-validation
 
 ../../crypto/protostar/dist/protostar/protostar build
-../../crypto/protostar/dist/protostar/protostar deploy ./build/main.json
+../../crypto/protostar/dist/protostar/protostar deploy ./build/main.json --inputs initial_value=100
 
 # ➜  ~/Desktop/workspace/tmp/protostar-test-2 git:(deploy) ✗ ./execute_scripts.sh      git:(deploy|✚3…3 
 # 19:01:25 [INFO] Built the project successfully                                                         

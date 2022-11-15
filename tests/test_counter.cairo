@@ -17,7 +17,7 @@ namespace CounterContract {
 @external
 func setup_basic() {
     %{
-      context.contract_address = deploy_contract("./src/counter.cairo").contract_address
+      context.contract_address = deploy_contract("./src/counter.cairo", [100]).contract_address
     %}
     return ();
 }

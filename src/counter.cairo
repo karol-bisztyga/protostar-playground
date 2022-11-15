@@ -8,8 +8,8 @@ func value() -> (res: felt) {
 }
 
 @constructor
-func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}() {
-    value.write(100);
+func constructor{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(initial_value: felt) {
+    value.write(initial_value);
     return ();
 }
 
