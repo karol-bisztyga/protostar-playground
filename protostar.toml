@@ -1,5 +1,5 @@
 [project]
-protostar-version = "0.7.0"
+protostar-version = "0.8.1"
 lib-path = "lib"
 cairo_path = ["./lib/cairo_contracts/src", "./lib/cairo_contracts/src2", "./lib/cairo_contracts/src3"]
 
@@ -11,23 +11,23 @@ disable-hint-validation = ""
 
 [deploy]
 gateway-url = "http://127.0.0.1:5050/"
-account_address = 3548615127024718504837912723565552470001553775722780232434454907117485572204
+chain-id = 1536727068981429685321
+account-address = 0x1435a7a9a2ec3da4bf19df0dbeaaecb2a87636768093259dfb1ff7f6a6dcfcc
 private-key-path = "priv.key"
 max-fee = "auto"
-chain-id = 1536727068981429685321
 
 [declare]
 gateway-url = "http://127.0.0.1:5050/"
-account_address = 3548615127024718504837912723565552470001553775722780232434454907117485572204
+chain-id = 1536727068981429685321
+account-address = 0x1435a7a9a2ec3da4bf19df0dbeaaecb2a87636768093259dfb1ff7f6a6dcfcc
 private-key-path = "priv.key"
 max-fee = "auto"
-chain-id = 1536727068981429685321
 
 [invoke]
 contract-address = 2496978988892898008591447895694912236928027220751907707259296098926566028994
 gateway-url = "http://127.0.0.1:5050/"
 chain-id = 1536727068981429685321
-account_address = 2899002840950917848141033673686559568786872973208783659679499391673749282196
+account-address = 2899002840950917848141033673686559568786872973208783659679499391673749282196
 private-key-path = "priv.key"
 max-fee = "auto"
 
