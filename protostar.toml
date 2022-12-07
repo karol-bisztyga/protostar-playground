@@ -4,7 +4,8 @@ lib-path = "lib"
 cairo_path = ["./lib/cairo_contracts/src", "./lib/cairo_contracts/src2", "./lib/cairo_contracts/src3"]
 
 [contracts]
-main = ["src/counter.cairo"]
+basic = ["src/basic.cairo"]
+counter = ["src/counter.cairo"]
 
 [test]
 disable-hint-validation = ""
