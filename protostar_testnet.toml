@@ -1,0 +1,25 @@
+[project]
+protostar-version = "0.8.1"
+lib-path = "lib"
+cairo_path = ["./lib/cairo_contracts/src", "./lib/cairo_contracts/src2", "./lib/cairo_contracts/src3"]
+
+[contracts]
+main = ["src/main.cairo"]
+
+[test]
+disable-hint-validation = ""
+
+[declare]
+network = "testnet"
+account-address = 0x0668c707Af664985EDfB3Ea616a0189660C2C54ADCa787B870B55DC314b91d94
+private-key-path = "priv.key"
+max-fee = "auto"
+
+[deploy]
+network = "testnet"
+account-address = 0x0668c707Af664985EDfB3Ea616a0189660C2C54ADCa787B870B55DC314b91d94
+private-key-path = "priv.key"
+max-fee = "auto"
+
+[call]
+network = "testnet"
