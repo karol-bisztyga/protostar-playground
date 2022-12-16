@@ -13,3 +13,21 @@ func test_increase_balance{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: Ha
     assert result_after = 42;
     return ();
 }
+
+@external
+func test_success{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
+    assert 1 = 1;
+    return ();
+}
+
+@external
+func test_fail{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
+    assert 1 = 2;
+    return ();
+}
+
+@external
+func test_skip{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: HashBuiltin*}() {
+    assert 1 = 1;
+    return ();
+}
