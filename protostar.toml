@@ -4,25 +4,4 @@ lib-path = "lib"
 cairo_path = ["./lib/cairo_contracts/src", "./lib/cairo_contracts/src2", "./lib/cairo_contracts/src3"]
 
 [contracts]
-main = ["src/main.cairo"]
-
-[test]
-disable-hint-validation = ""
-
-[declare]
-gateway-url = "http://127.0.0.1:5050/"
-chain-id = 1536727068981429685321
-account-address = 0x37c4db734dda1e7c76914025b8769b0912b86cc3ce3f4e430f6fb0f4612679f
-private-key-path = "priv.key"
-max-fee = "auto"
-
-[deploy]
-gateway-url = "http://127.0.0.1:5050/"
-chain-id = 1536727068981429685321
-account-address = 0x37c4db734dda1e7c76914025b8769b0912b86cc3ce3f4e430f6fb0f4612679f
-private-key-path = "priv.key"
-max-fee = "auto"
-
-[call]
-gateway-url = "http://127.0.0.1:5050/"
-chain-id = 1536727068981429685321
+basic = ["src/basic"]
